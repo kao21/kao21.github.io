@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE HTML>
+<html>
+    
+<!-- Mirrored from bywinters.win/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 14 Oct 2017 22:44:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    	<meta charset="utf-16">
+		<title>koda.pw</title>
+		<script src="scripts/me.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/animate.css">
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/marquee.js"></script>
+        <script src="scripts/main.js"></script>
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	</head>
+	
+
+    <body>
+	<style>
+  .clockStyle {
+  font-family: monospace;
+  font-size: 15px;
+  }
+ </style>
+ 
+  <center><div id="clockDisplay" class="clockStyle"></div></center>
+  <script>
+   function renderTime() {
+   var currentTime = new Date();
+   var diem = "am";
+   var h = currentTime.getHours();
+   var m = currentTime.getMinutes();
+   var s = currentTime.getSeconds();
+   setTimeout('renderTime()',1000);
+   if (h == 0) {
+    h = 12;
+   } else if (h > 12) { 
+    h = h - 12;
+    diem="pm";
+   }
+   if (h < 10) {
+    h = "0" + h;
+   }
+   if (m < 10) {
+    m = "0" + m;
+   }
+   if (s < 10) {
+    s = "0" + s;
+   }
+   var myClock = document.getElementById('clockDisplay');
+   myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+   myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+   }
+   renderTime();
+  </script>
+  <script src="scripts/hitmarker.js"></script>
+        <div id="center">
+		<div class="animated fadeInDown">
+		<pre style="font-size: 30px">koda</pre></i>
+		</div>
+		<div class="animated fadeIn">
+        <pre>links:</pre>
+        <pre>/<div id="marquee"></div>/</pre>
+		</div>
+		<div class="animated fadeInUp">
+		<center><pre><a href="" target=_blank></a> <a href="" target=_blank></a></pre></center>
+		</div>
+        </div>
+		<audio autoplay loop id="player">
+		<source src="audio/music.mp3" />
+		<script>
+		var audio = document.currentScript.parentElement;
+		audio.volume = 0.2;
+		</script>
+		</audio>
+</body>
+</html>
+
